@@ -148,11 +148,11 @@ class Graster
         PRIORITY.index(k1) <=> PRIORITY.index(k2)
       }.map {|k,v|
         if v.is_a? Integer
-          "#{k.upcase}#{v}"
+          "#{k.to_s.upcase}#{v}"
         elsif v.is_a? Float
-          "#{k.upcase}%0.3f" % v
+          "#{k.to_s.upcase}%0.3f" % v
         else
-          "#{k.upcase}"
+          "#{k.to_s.upcase}"
         end
       }.join(' ') + "\n"
     end
